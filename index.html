@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quito Coffee Roasters | Bitácora de Tueste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="marca">
+                <div class="marca-sello"><span>QCR</span></div>
+                <h1 class="logo">Quito Coffee Roasters<small>Bitácora de Tueste Nº 03</small></h1>
+            </div>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#catalogo">Lotes</a></li>
+                    <li><a href="#calculadora">Pedido</a></li>
+                    <li><a href="#contacto">Despacho</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" aria-labelledby="hero-title">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <span class="hero-eyebrow">Sala de tueste — Centro Histórico, Quito</span>
+                    <h2 id="hero-title">Cada taza empieza en la bitácora del tostador</h2>
+                    <p class="hero-subtitle">Lotes registrados a mano, tueste medido al grado y entrega directa a tu puerta en Quito.</p>
+                    <a class="hero-enlace" href="#catalogo">Ver lotes disponibles →</a>
+                </div>
+
+                <div class="widgets-container">
+                    <div id="frase-widget" class="widget" aria-live="polite">
+                        <h3>Nota del Tostador</h3>
+                        <div class="frase-contenedor">
+                            <p class="frase-texto">"El tueste perfecto no se apura: se escucha el primer crack y se anota la hora."</p>
+                            <span class="frase-firma">— Bitácora, entrada 214</span>
+                        </div>
+                    </div>
+
+                    <div id="clima-widget" class="widget" aria-live="polite">
+                        <h3>Condiciones en Quito</h3>
+                        <div id="clima-contenido">
+                            <p class="loading">Tomando lectura...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo" aria-labelledby="catalogo-title">
+            <div class="seccion-titulo">
+                <span class="seccion-numero">01</span>
+                <h2 id="catalogo-title">Bitácora de Lotes</h2>
+            </div>
+
+            <div class="filtros-container">
+                <input type="text" id="buscador" placeholder="Buscar por nombre de lote..." aria-label="Buscar café">
+                <select id="filtro-origen" aria-label="Filtrar por origen del café">
+                    <option value="todos">Todos los orígenes / Categorías</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Etiopía">Etiopía</option>
+                    <option value="Combos">Sets Especiales</option>
+                </select>
+            </div>
+
+            <div id="productos-grid" class="grid-productos" aria-live="polite">
+                <article class="tarjeta-cafe" data-id="lote-07-pichincha" data-nombre="Lote 07 Pichincha Alto" data-precio="3.75" data-origen="Ecuador">
+                    <div class="cafe-imagen-placeholder"><i class="fas fa-mountain"></i></div>
+                    <div class="cafe-info">
+                        <span class="cafe-origen">Ecuador</span>
+                        <span class="cafe-lote">LOTE 07 · Proceso Lavado · 1.900 msnm</span>
+                        <h3 class="cafe-nombre">Pichincha Alto</h3>
+                        <p class="cafe-notas">Cultivado en las faldas del Pichincha. Taza dulce, cuerpo medio, con notas a caramelo y manzana verde.</p>
+                        <p class="cafe-precio">$3.75</p>
+                        <button class="btn-primario btn-agregar" data-id="lote-07-pichincha" data-nombre="Lote 07 Pichincha Alto" data-precio="3.75">Registrar en pedido</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta-cafe" data-id="lote-12-huila" data-nombre="Lote 12 Huila" data-precio="4.20" data-origen="Colombia">
+                    <div class="cafe-imagen-placeholder"><i class="fas fa-seedling"></i></div>
+                    <div class="cafe-info">
+                        <span class="cafe-origen">Colombia</span>
+                        <span class="cafe-lote">LOTE 12 · Proceso Lavado · 1.750 msnm</span>
+                        <h3 class="cafe-nombre">Huila</h3>
+                        <p class="cafe-notas">Micro-lote de productores de Huila. Acidez cítrica brillante, cuerpo sedoso y final a panela tostada.</p>
+                        <p class="cafe-precio">$4.20</p>
+                        <button class="btn-primario btn-agregar" data-id="lote-12-huila" data-nombre="Lote 12 Huila" data-precio="4.20">Registrar en pedido</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta-cafe" data-id="lote-21-yirgacheffe" data-nombre="Lote 21 Yirgacheffe" data-precio="4.50" data-origen="Etiopía">
+                    <div class="cafe-imagen-placeholder"><i class="fas fa-spa"></i></div>
+                    <div class="cafe-info">
+                        <span class="cafe-origen">Etiopía</span>
+                        <span class="cafe-lote">LOTE 21 · Proceso Natural · 2.000 msnm</span>
+                        <h3 class="cafe-nombre">Yirgacheffe</h3>
+                        <p class="cafe-notas">Perfil floral intenso, con notas a durazno y jazmín. Cuerpo ligero, casi como un té negro.</p>
+                        <p class="cafe-precio">$4.50</p>
+                        <button class="btn-primario btn-agregar" data-id="lote-21-yirgacheffe" data-nombre="Lote 21 Yirgacheffe" data-precio="4.50">Registrar en pedido</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta-cafe" data-id="kit-cata-casa" data-nombre="Kit de Cata en Casa" data-precio="9.00" data-origen="Combos">
+                    <div class="cafe-imagen-placeholder"><i class="fas fa-vial"></i></div>
+                    <div class="cafe-info">
+                        <span class="cafe-origen">Set Especial</span>
+                        <span class="cafe-lote">SET · 3 muestras de 50g</span>
+                        <h3 class="cafe-nombre">Kit de Cata en Casa</h3>
+                        <p class="cafe-notas">Tres muestras de 50g de lotes distintos, más una hoja de bitácora para registrar tus propias notas de cata.</p>
+                        <p class="cafe-precio">$9.00</p>
+                        <button class="btn-primario btn-agregar" data-id="kit-cata-casa" data-nombre="Kit de Cata en Casa" data-precio="9.00">Registrar en pedido</button>
+                    </div>
+                </article>
+
+                <article class="tarjeta-cafe" data-id="ronda-prensa-nocturna" data-nombre="Ronda de Prensa Nocturna" data-precio="14.50" data-origen="Combos">
+                    <div class="cafe-imagen-placeholder"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="cafe-info">
+                        <span class="cafe-origen">Set Especial</span>
+                        <span class="cafe-lote">SET · Equipo incluido</span>
+                        <h3 class="cafe-nombre">Ronda de Prensa Nocturna</h3>
+                        <p class="cafe-notas">300g de molienda gruesa, una mini prensa francesa y un temporizador de arena para tu ritual de la noche.</p>
+                        <p class="cafe-precio">$14.50</p>
+                        <button class="btn-primario btn-agregar" data-id="ronda-prensa-nocturna" data-nombre="Ronda de Prensa Nocturna" data-precio="14.50">Registrar en pedido</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="calculadora" aria-labelledby="calculadora-title">
+            <div class="seccion-titulo">
+                <span class="seccion-numero">02</span>
+                <h2 id="calculadora-title">Ficha de Pedido</h2>
+            </div>
+
+            <div class="calculadora-container">
+                <div class="carrito-detalle">
+                    <h3>Lotes Registrados</h3>
+                    <ul id="lista-carrito" class="lista-carrito" aria-live="polite">
+                        <li class="carrito-vacio">Aún no has registrado cafés o sets en tu pedido.</li>
+                    </ul>
+                </div>
+
+                <div class="calculo-valores">
+                    <h3>Resumen</h3>
+
+                    <div class="control-grupo">
+                        <label for="select-zona">Zona de entrega en Quito:</label>
+                        <select id="select-zona">
+                            <option value="">Selecciona tu zona...</option>
+                            <option value="Centro">Centro Histórico ($1.80)</option>
+                            <option value="Norte">Norte ($2.50)</option>
+                            <option value="Sur">Sur ($3.00)</option>
+                            <option value="Valles">Valles ($3.50)</option>
+                        </select>
+                    </div>
+
+                    <div class="totales">
+                        <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                        <p>Envío: <span id="envio">$0.00</span></p>
+                        <hr>
+                        <p class="total-destacado">Total: <span id="total">$0.00</span></p>
+                    </div>
+
+                    <div class="conversor">
+                        <button id="btn-convertir" class="btn-secundario">Pagar en EUR (€)</button>
+                        <p id="total-convertido" class="total-eur" aria-live="polite"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" aria-labelledby="contacto-title">
+            <div class="seccion-titulo">
+                <span class="seccion-numero">03</span>
+                <h2 id="contacto-title">Ficha de Despacho</h2>
+            </div>
+            <p class="contacto-subtitulo">Completa tus datos y confirmamos el pedido directo por WhatsApp.</p>
+            <form id="formulario-contacto" novalidate>
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <span class="error-mensaje" id="error-nombre"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-mensaje" id="error-email"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                    <span class="error-mensaje" id="error-telefono"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Dirección o indicaciones de entrega:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Calle, referencia, piso, horario preferido..."></textarea>
+                    <span class="error-mensaje" id="error-mensaje-texto"></span>
+                </div>
+
+                <button type="submit" class="btn-primario">Confirmar y enviar por WhatsApp</button>
+                <div id="feedback-formulario" class="feedback-mensaje" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Quito Coffee Roasters</h3>
+                <p>Centro Histórico, Quito, Ecuador</p>
+                <p>+593 999 999 999</p>
+                <p>Lunes a sábado · 08:00–19:00</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-credits">
+                <p>&copy; 2026 Quito Coffee Roasters — Bitácora de Tueste Nº 03</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
